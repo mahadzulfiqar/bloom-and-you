@@ -1,0 +1,151 @@
+/* src/styles/customize.css */
+
+.customize-container {
+  background-color: #FBEAEA;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.customize-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.cust-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1A1A1A;
+}
+
+.cust-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* TABS */
+.cust-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid #1A1A1A;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  transition: all 0.3s;
+  color: #1A1A1A;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  background-color: #1A1A1A;
+  color: #FFF;
+}
+
+/* WORKSPACE - CENTERED */
+.cust-workspace-centered {
+  max-width: 800px; /* Limits width so it doesn't stretch too wide */
+  margin: 0 auto;   /* Centers the box */
+}
+
+/* FORM SECTION */
+.cust-form-section {
+  background-color: #FFF;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.section-header {
+  font-family: var(--font-serif);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 10px;
+  text-align: center; /* Center header since box is centered */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.cust-input {
+  padding: 12px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #FAFAFA;
+}
+
+.cust-input:focus {
+  outline: none;
+  border-color: #1A1A1A;
+  background-color: #FFF;
+}
+
+.price-tag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.btn-finish-custom {
+  width: 100%;
+  padding: 15px;
+  background-color: #1A1A1A;
+  color: #FFF;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-finish-custom:hover {
+  background-color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .cust-form-section {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,150 @@
+/* src/index.css */
+
+/* GLOBAL FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* RESET EVERYTHING */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+  --color-dark: #1A1A1A;
+  --color-pink-bg: #FBEAEA;
+  --color-pink-footer: #E6C1D5;
+  --color-lavender: #9D8FB8;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-pink-bg);
+  font-family: var(--font-sans);
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* =========================================
+   FULL-BLEED HEADER (FIXED)
+   ========================================= */
+.site-header {
+  background-color: var(--color-dark);
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+  font-family: var(--font-serif);
+  color: var(--color-lavender);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.site-nav a {
+  color: #DDD;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover { color: #FFF; }
+
+.site-nav .nav-pill {
+  background-color: #444;
+  padding: 6px 18px;
+  border-radius: 20px;
+  color: #FFF;
+}
+
+/* =========================================
+   FULL-BLEED FOOTER (FIXED)
+   ========================================= */
+.site-footer {
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Top Pink Section */
+.footer-contact {
+  background-color: var(--color-pink-footer);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-contact h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: #581C3D;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover { transform: scale(1.1); }
+
+/* Bottom Black Section */
+.footer-copyright {
+  background-color: var(--color-dark);
+  color: #FFF;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 300;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-copyright span { opacity: 0.8; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .site-header { padding: 0 20px; }
+  .footer-copyright { flex-direction: column; text-align: center; padding: 15px 20px; }
+}

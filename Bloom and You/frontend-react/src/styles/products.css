@@ -1,0 +1,139 @@
+/* src/styles/products.css */
+
+:root {
+  --bg-pink: #FBEAEA;
+  --text-dark: #1A1A1A;
+  --btn-grey: #D9D9D9;
+}
+
+.products-container {
+  background-color: var(--bg-pink);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean Sans */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.products-title {
+  font-family: "Playfair Display", serif; /* Serif for Title */
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.products-subtitle {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* GRID LAYOUT */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px; /* Row gap 50, Col gap 30 */
+}
+
+/* CARD STYLES */
+.main-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  background-color: #EEE; /* Placeholder grey bg */
+  margin-bottom: 20px;
+  transition: opacity 0.3s;
+}
+
+.card-img-wrapper:hover {
+  opacity: 0.9;
+}
+
+.main-product-card img {
+  width: 100%;
+  height: 400px; /* Fixed height for consistency */
+  object-fit: cover;
+  display: block;
+}
+
+.card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 1. PRODUCT NAME BUTTON (Rectangular, Clean) */
+.btn-product-name {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #1A1A1A;
+  color: #1A1A1A;
+  padding: 8px 20px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  min-width: 180px; /* Ensure uniform width */
+}
+
+.btn-product-name:hover {
+  background-color: #1A1A1A;
+  color: #FFF;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* 2. CUSTOMIZE BUTTON (Grey Pill Style - Matches Ref) */
+.btn-customize-pill {
+  display: inline-block;
+  background-color: var(--btn-grey); /* Light Grey */
+  color: #000;
+  padding: 12px 50px;
+  border-radius: 50px; /* Full pill shape */
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-customize-pill:hover {
+  background-color: #C0C0C0; /* Slightly darker grey on hover */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .product-grid { grid-template-columns: 1fr; }
+}

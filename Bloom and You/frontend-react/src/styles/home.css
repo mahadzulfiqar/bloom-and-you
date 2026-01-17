@@ -1,0 +1,267 @@
+/* src/styles/home.css */
+
+/* --- FONTS & VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bg-pink: #FBEAEA;
+  --bg-dark-pink: #D6A6C3;
+  --bg-white: #FFFFFF;
+  --text-black: #1A1A1A;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+/* --- PAGE RESET --- */
+.home-container {
+  background-color: var(--bg-pink);
+  font-family: var(--font-sans);
+  color: var(--text-black);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  padding: 0; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content-box {
+  background-color: var(--bg-white);
+  padding: 40px 60px;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1A1A1A;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- PRODUCT GRID --- */
+.product-grid-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px; 
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #1A1A1A;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* UPDATED: Ensures the card fills the grid height so bottoms align */
+  height: 100%;
+}
+
+.card-image-box {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  background-color: #E6E6E6;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* UPDATED: Made this a flex container to push button to bottom */
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1; /* Takes up all remaining space */
+}
+
+/* Wrapper for text content to keep it at the top of the details area */
+.card-text-top {
+  width: 100%;
+}
+
+.card-details h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.card-details .subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-customize-black {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  transition: background 0.3s;
+  letter-spacing: 1px;
+  /* UPDATED: Pushes button to the very bottom of the card */
+  margin-top: auto; 
+}
+.btn-customize-black:hover { background-color: #000; }
+
+/* --- OUR STORY --- */
+.our-story-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.our-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  padding: 0 20px;
+}
+
+.story-pink-box {
+  background-color: var(--bg-dark-pink);
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.story-pink-box h2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.story-gray-box {
+  background-color: #D9D9D9;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.story-gray-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- MOST SELLING --- */
+.most-selling-section {
+  text-align: center;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.most-selling-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: var(--font-serif);
+}
+
+.selling-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+/* UPDATED: Removed background transparent and added text decoration none */
+.selling-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none; /* Removes underline from Link */
+  color: inherit; /* Inherits text color */
+  transition: transform 0.2s; /* Optional: Slight hover effect */
+}
+.selling-card:hover {
+  transform: translateY(-5px); /* Optional: Slight lift on hover */
+}
+
+.selling-img-placeholder {
+  background-color: #E0E0E0;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.selling-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.selling-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.selling-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0 0 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .grid-container, .selling-grid, .our-story-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .story-pink-box, .story-gray-box { min-height: 250px; }
+}
